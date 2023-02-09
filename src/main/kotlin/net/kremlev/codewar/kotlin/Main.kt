@@ -1,14 +1,18 @@
 package net.kremlev.codewar.kotlin
 
 import net.kremlev.codewar.kotlin.task.MultiplesOf3Or5
+import net.kremlev.codewar.kotlin.task.Multiplication.multiply
 import net.kremlev.codewar.kotlin.task.SumOfOddNumbers
 import net.kremlev.codewar.kotlin.task.TwoSum
 import net.kremlev.codewar.kotlin.util.Assert.assertEquals
+import net.kremlev.codewar.kotlin.util.Assert.delta
+import kotlin.math.floor
 
 fun main(args: Array<String>) {
     //testTwoSum()
     //testMultiplesOf3or5()
-    testSumOfOddNumbers()
+    //testSumOfOddNumbers()
+    testMultiplication()
 }
 
 private fun testTwoSum() {
@@ -36,4 +40,17 @@ private fun testSumOfOddNumbers() {
     assertEquals(636056, SumOfOddNumbers.rowSumOddNumbers(86))
     assertEquals(804357, SumOfOddNumbers.rowSumOddNumbers(93))
     assertEquals(1030301, SumOfOddNumbers.rowSumOddNumbers(101))
+}
+
+private fun testMultiplication() {
+    for (i in 0..99) {
+        val a = Math.random()
+        val b = Math.random()
+        val c = Math.random()
+        assertEquals(
+            delta(multiply(multiply(a, b), c)),
+            delta(multiply(a, multiply(b, c)))
+        )
+        assertEquals(multiply(a, b), a * b);
+    }
 }
