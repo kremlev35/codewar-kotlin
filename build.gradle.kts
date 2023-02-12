@@ -12,13 +12,18 @@ repositories {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    val junitVersion = "5.9.2"
+    testImplementation(platform("org.junit:junit-bom:${junitVersion}"))
+    testImplementation(group = "org.junit.jupiter", name = "junit-jupiter")
 }
 
 tasks.test {
-    useTestNG()
+    useJUnitPlatform()
+    testLogging {
+        events("passed", "skipped", "failed")
+    }
 }
 
 tasks.withType<KotlinCompile>() {
-    kotlinOptions.jvmTarget = "11"
+    kotlinOptions.jvmTarget = "17"
 }
