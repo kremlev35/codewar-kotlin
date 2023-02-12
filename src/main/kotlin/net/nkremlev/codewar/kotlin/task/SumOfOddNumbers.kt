@@ -1,4 +1,4 @@
-package net.kremlev.codewar.kotlin.task
+package net.nkremlev.codewar.kotlin.task
 
 import kotlin.math.pow
 

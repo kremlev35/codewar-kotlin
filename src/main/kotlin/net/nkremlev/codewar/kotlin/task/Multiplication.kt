@@ -1,4 +1,4 @@
-package net.kremlev.codewar.kotlin.task
+package net.nkremlev.codewar.kotlin.task
 
 /**
  * @see <a href="https://www.codewars.com/kata/50654ddff44f800200000004/train/kotlin"/>

@@ -1,4 +1,4 @@
-package net.kremlev.codewar.kotlin.task
+package net.nkremlev.codewar.kotlin.task
 
 /**
  * @see <a href="https://www.codewars.com/kata/514b92a657cdc65150000006">Multiples of 3 or 5</a>
